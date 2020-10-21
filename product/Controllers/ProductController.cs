@@ -15,11 +15,16 @@ namespace product.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add(int id,string brand,string name,int qty,int price)
+        public IActionResult Add(int id,string brand,string name,int qty,int price,string mail)
         {
             Bill ob = new Bill();
-            ob.GenerateBill(id,brand,name,qty,price);
+
+            string attach=ob.GenerateBill(id,brand,name,qty,price);
+            SendMail send = new SendMail();
+           
+            send.SendEmail(mail,attach);
             return View();
         }
+
     }
 }
