@@ -14,7 +14,7 @@ namespace product.Utilities
             Random rn = new Random();
             int no = rn.Next(1000, 2000);
             string path = Directory.GetCurrentDirectory();
-            string filename = @"C:\Users\hp\Source\Repos\employee-management-system\product\Billreport\" + "ozreport"+no+".txt";
+            string filename = @"C:\Users\krish\source\repos\employee management system\product\Billreport\" + "ozreport"+no+".txt";
             using (StreamWriter writer = new StreamWriter(filename))
             {
                 writer.WriteLine("\t\t\t\toutput");

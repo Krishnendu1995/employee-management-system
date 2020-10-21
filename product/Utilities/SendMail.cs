@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Mail;
+using Microsoft.VisualBasic;
+using System.Net;
+using System.Runtime.CompilerServices;
+using System.ComponentModel.DataAnnotations;
 
 namespace product.Utilities
 {
@@ -17,7 +21,7 @@ namespace product.Utilities
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.UseDefaultCredentials = true;
-            mail.From = new MailAddress("onlinerentingapp@gmail.com"); // From
+            mail.From = new MailAddress("krishalp96@gmail.com"); // From
 
             mail.To.Add(toAddress);// To
             
@@ -28,11 +32,12 @@ namespace product.Utilities
 
 
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("onlinerentingapp@gmail.com", "Autogreen");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("krishalp96@gmail.com", "krishnendu96");
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
 
         }
-    }
+        
+}
 }

@@ -1,0 +1,4 @@
+				output
+-------------------------------------------------------------------------------------------
+id                Brandname                Name           Quantity            Price
+3                fastrack                     ladies watch              1             1000
